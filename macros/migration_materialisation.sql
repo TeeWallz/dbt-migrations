@@ -1,6 +1,6 @@
 {% materialization migration, default %}
     
-    {% set this_rev = (this.name | int) %}
+    {% set this_rev = (this.name.split('_')[0] | int) %}
     {% set query_text %}
         select * from {{ ref('change_history') }} where revision={{ this_rev }}
     {% endset %}
