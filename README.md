@@ -22,7 +22,7 @@ This plugin includes:
 1. Add to packages.yml in your dbt project root:
 ```
 packages:    
-  - git: "https://github.com/jamesweakley/dbt-migrations.git"
+  - git: "https://github.com/TeeWallz/dbt-migrations.git"
     revision: master
 ```
 
@@ -32,7 +32,7 @@ packages:
 
 4. Create migration files like so:
 
-migrations/1.sql
+migrations/1_my_csv_format.sql
 ```
 {{ config(materialized='migration') }}
 {{ dbt_migrations.enforce_migration_dependancy() }}
@@ -46,7 +46,7 @@ create or replace file format my_csv_format
   compression = gzip;
 ```
 
-migrations/2.sql
+migrations/2_my_int_stage.sql
 ```
 {{ config(materialized='migration') }}
 {{ dbt_migrations.enforce_migration_dependancy() }}
