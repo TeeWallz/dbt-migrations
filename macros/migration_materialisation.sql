@@ -21,5 +21,4 @@
     {% endif -%}
     
 
-{%- do store_result('main', status='OK') -%}
 {% endmaterialization %}
