@@ -30,12 +30,12 @@ packages:
 
 3. Add "migrations" to your source-paths array in project.yml
 
-5. Create the migrations table
+4. Create the migrations table
 ```sql
 dbt run  --select change_history
 ```
 
-4. Create migration files like so:
+5. Create migration files like so:
 
 migrations/1_my_csv_format.sql
 ```
@@ -61,4 +61,4 @@ create or replace stage my_int_stage
 
 ```
 
-5. `dbt run`
+6. `dbt run`
