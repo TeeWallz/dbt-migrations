@@ -20,5 +20,5 @@
         log('Not running migration ' ~ this_rev, info=True)}}
     {% endif -%}
     
-
+    {{ return({'relations': [target_relation]}) }}
 {% endmaterialization %}
