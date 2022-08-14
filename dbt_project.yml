@@ -5,7 +5,7 @@ require-dbt-version: ">=0.15.1"
 
 config-version: 2
 
-source-paths: ["models"]
+model-paths: ["models"]
 target-path: "target"
 clean-targets: ["target", "dbt_modules"]
 macro-paths: ["macros"]
